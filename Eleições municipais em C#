@@ -1,0 +1,41 @@
+using System;
+
+class Program 
+{
+    private const string V = "%";
+
+    public static void Main (string[] args) 
+  {
+    int votosBrancos;
+    int votosNulos;
+    int votosValidos;
+    int totalDeVotos;
+    double porcVBrancos;
+    double porcVNulos;
+    double porcVValidos;
+    
+    Console.WriteLine("Eleições municipais!");
+    Console.WriteLine("Informe o número de votos brancos: ");
+    votosBrancos = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Informe o número de votos nulos: ");
+    votosNulos = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Informe o número de votos validos: ");
+    votosValidos = Convert.ToInt32(Console.ReadLine());
+
+    totalDeVotos = votosBrancos + votosNulos + votosValidos;
+    porcVBrancos = 100 * votosBrancos / totalDeVotos;
+    porcVNulos = 100 * votosNulos / totalDeVotos;
+    porcVValidos = 100 * votosValidos / totalDeVotos;
+
+    Console.WriteLine("O percentual de votos validos foi " + 
+    porcVValidos + "%");
+    Console.WriteLine("O percentual de votos brancos foi " + 
+    porcVBrancos + "%");
+    Console.WriteLine("O percentual de votos nulos foi " + 
+    porcVNulos + "%");
+    Console.WriteLine("O total de votos foi de " + totalDeVotos + ".");
+    
+
+    
+  }
+}
